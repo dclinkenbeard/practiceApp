@@ -11,19 +11,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @SpringBootApplication
 public class DemoApplication {
 
-//  @RequestMapping("/")
-//  @ResponseBody
-//  String home(@RequestParam(defaultValue = "test") String id) {
-//    if(id.equals("21233")){
-//      return "AHHHHHHHHHH yeah";
-//    }
-//    return "Hello world! param == " + id;
-//  }
+  @RequestMapping("/")
+  @ResponseBody
+  String home(@RequestParam(defaultValue = "test") String id) {
+    if(id.equals("21233")){
+      return "AHHHHHHHHHH yeah";
+    }
+    return "Hello world! param == " + id;
+  }
 
-  @RequestMapping("/foo")
+  @RequestMapping(value = "/name")
   @ResponseBody
   String name(){
-    return "HI!";
+    return "name";
   }
 
   public static void main(String[] args) {
